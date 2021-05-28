@@ -1,7 +1,9 @@
 #ifndef JGP_HPP
 #define JGP_HPP
 #include "Archivo.hpp"
-class JGP : Archivo
+#include "FileSystemNode.hpp"
+#include <string>
+class JGP : public Archivo
 {
 	private: 
 	bool conFlash; 
@@ -11,7 +13,7 @@ class JGP : Archivo
 	public:
 		JGP();
 		~JGP();
-		JPG(bool conFlash,string resolucion, double largo, double ancho);
+		
 	
 	 void set_Flash(bool x); 
 	 bool get_Flash(); 

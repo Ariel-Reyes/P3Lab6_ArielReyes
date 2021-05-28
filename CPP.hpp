@@ -8,7 +8,7 @@ class CPP : public Archivo {
 	public:
 		CPP();
 		~CPP();
-		CPP(int,int,string nombre, string autor, FileSystemNode* padre);
+		CPP(int,int,string nombre, string autor,FileSystemNode* padre);
 
 		void set_lineasCodigo(int);
 		int get_lineasCodigo();

@@ -10,6 +10,7 @@ class FileSystemNode {
 		FileSystemNode* padre;
 	public:
 		FileSystemNode();
+		FileSystemNode(string nombre,string autor);
 		~FileSystemNode();
 		FileSystemNode(string nombre,string autor,FileSystemNode* padre);
 

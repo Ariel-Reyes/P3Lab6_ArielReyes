@@ -8,7 +8,7 @@ PTT::~PTT()
 {
 }
 
- PTT::PTT(string titulo, int numSlides,int numPlantillas,bool tieneAnimacion,string nombre, string autor, FileSystemNode* padre) : Archivo(nombre,autor,padre) {
+ PTT::PTT(string titulo, int numSlides,int numPlantillas,bool tieneAnimacion,string nombre, string autor,FileSystemNode* padre) : Archivo(nombre,autor,padre) {
  	this->titulo = titulo; 
  	this->numSlides = numSlides; 
  	this->numPlantillas = numPlantillas; 

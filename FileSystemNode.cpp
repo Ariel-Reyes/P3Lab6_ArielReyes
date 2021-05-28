@@ -14,6 +14,14 @@ FileSystemNode::FileSystemNode(string nombre,string autor,FileSystemNode* padre)
 	this->padre = padre;
 };
 
+ FileSystemNode::FileSystemNode(string nombre,string autor){
+ 	this->nombre = nombre; 
+ 	this->autor = autor; 
+ };
+
+
+
+
 void FileSystemNode::set_nombre(string nombre) {
 	this->nombre = nombre;
 };

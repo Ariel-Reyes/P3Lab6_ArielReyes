@@ -1,20 +1,17 @@
 #include "JGP.hpp"
 
-JGP::JGP()
-{
+
+JGP::JGP(){
+	
 }
+
+
 
 JGP::~JGP()
 {
 }
 
-	JGP::JPG(bool conFlash,string resolucion, double largo, double ancho){
-		this->conFlash = conFlash; 
-		this->resolucion = resolucion; 
-		this->largo = largo; 
-		this->largo = largo; 
-		this->ancho = ancho; 
-	};
+
 	
 	 void JGP::set_Flash(bool x){
 	 	this->conFlash = x; 
