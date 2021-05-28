@@ -122,21 +122,21 @@ int menu() {
 						conFlash = false;
 					}
 
-                  cout<<"Ingrese el tipo de resolucion: "<<endl;
-                  cin>>resolucion; 
-                  cout<<"Ingrese el largo: "<<endl; 
-                  cin>>largo; 
-                  cout<<"Ingrese el ancho: "<<endl;
-                  cin>>ancho; 
-                string nombre;
-				string autor;
-				cout<<"Ingrese el nombre del nodo: "<<endl; 
-				cin>>nombre; 
-				cout<<"Ingrese el nombre del autor: "<<endl; 
-				cin>>autor; 
-	         FileSystemNode* padre = new FileSystemNode(nombre,autor,padre);
-	          
-                  dir->agregarArchivo(padre); 
+					cout<<"Ingrese el tipo de resolucion: "<<endl;
+					cin>>resolucion;
+					cout<<"Ingrese el largo: "<<endl;
+					cin>>largo;
+					cout<<"Ingrese el ancho: "<<endl;
+					cin>>ancho;
+					string nombre;
+					string autor;
+					cout<<"Ingrese el nombre del nodo: "<<endl;
+					cin>>nombre;
+					cout<<"Ingrese el nombre del autor: "<<endl;
+					cin>>autor;
+					FileSystemNode* padre = new FileSystemNode(nombre,autor,padre);
+
+					dir->agregarArchivo(padre);
 
 					break;
 				}
@@ -151,6 +151,10 @@ int menu() {
 			break;
 		}
 		case 4: {
+			cout<<"Ingrese la palabra a Buscar: "<<endl; 
+			string x;
+			cin>>x;
+			dir->BuscarPorNombre(x); 
 			return 4;
 			break;
 		}
