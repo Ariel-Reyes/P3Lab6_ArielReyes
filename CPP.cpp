@@ -27,5 +27,8 @@ CPP::~CPP()
 			return this->numErrores; 
 		};  
 		 void CPP::toString(){
-		 	cout<<"Lineas de codigo: "<<lineasCodigo <<" , "<<" Numero de errores: "<<numErrores<<endl; 
+		 	
+		
+		 cout<<"Lineas de codigo: "<<lineasCodigo<<" , "<<" Numero de errores: "<< numErrores;
+			
 		 }; 

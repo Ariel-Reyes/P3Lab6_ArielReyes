@@ -44,5 +44,7 @@ PTT::~PTT()
 		}; 
         
          void PTT::toString(){
+         	
          	cout<<"Titulo: "<<titulo<<" Numero de Slides: "<<numSlides<<" Numero de Plantillas: "<<numPlantillas<<" Tiene Animacion: "<<tieneAnimacion<<endl; 
+          
 		 }; 

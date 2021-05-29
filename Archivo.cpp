@@ -14,5 +14,6 @@ Archivo::Archivo(string nombre,string autor,FileSystemNode* padre) : FileSystemN
 
 
 	 void Archivo::toString(){
-	 	cout<<"0"<<endl; 
+	 	string a ="0";
+    
 	 }; 

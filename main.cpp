@@ -10,6 +10,9 @@
 #include "FileSystem.hpp"
 using namespace std;
 Directorio* dir = new Directorio();
+FileSystem* dire = new FileSystem();
+vector<FileSystemNode*> d;
+vector<Directorio*> dire_list;
 int menu();
 int main() {
 	int opc = 0;
@@ -34,10 +37,46 @@ int menu() {
 
 	switch(opc) {
 		case 1: {
+			int s=  dir->get_hijos().size();
+			cout<<s<<endl;
+
 			return 1;
 			break;
 		}
 		case 2: {
+			int in=0;
+			Directorio* aux = new Directorio();
+			while(in!=1) {
+
+				cout<<"......Agregar Directorios........"<<endl;
+				for(int i=0; i<d.size(); i++) {
+					FileSystemNode* cpp = dynamic_cast<CPP*>(d[i]);
+					FileSystemNode* ptt = dynamic_cast<PTT*>(d[i]);
+					FileSystemNode* jgp = dynamic_cast<JGP*>(d[i]);
+					if(cpp) {
+						CPP* a = static_cast<CPP*>(d[i]);
+						cout<<i<<") "<<"Lineas de codigo: "<<a->get_lineasCodigo()<<" Numero de errores: "<<a->get_numErrores()<<" Nombre Autor"<<a->get_autor()<<" Nombre de Nodo: "<<a->get_nombre()<<endl;
+					}
+
+					if(ptt) {
+						PTT* b = static_cast<PTT*>(d[i]);
+						cout<<i<<") "<<"Numero de plantillas: "<<b->get_numPlantillas()<<" Numero slides: "<<b->get_numSlides()<<"Nombre de nodo: "<<b->get_nombre()<<"Nombre autor: "<<b->get_autor()<<"Animada"<<b->get_Animacion()<<endl;
+					}
+
+					if(jgp) {
+						JGP* c = static_cast<JGP*>(d[i]);
+						cout<<i<<") "<<"El ancho"<<c->get_ancho()<<" El largo"<<c->get_largo()<<" Flash: "<<c->get_Flash()<<endl;
+					}
+
+				}
+				cout<<"Ingrese el indice del archivo para el directorio: "<<endl;
+				int inde;
+				cin>>inde;
+				aux->agregarArchivo(d[inde]);
+				cout<<"1 = salir , otro numero continuar: "<<endl;
+				cin>>in;
+			}
+			dire_list.push_back(aux);
 			return 2;
 			break;
 		}
@@ -69,6 +108,8 @@ int menu() {
 					FileSystemNode* padre = new FileSystemNode(nombre,autor,padre);
 					CPP* cpp = new CPP(lineasCodigo,numErrores,nombre,autor,padre);
 					dir->agregarArchivo(cpp);
+					d.push_back(cpp);
+
 
 
 					break;
@@ -105,6 +146,7 @@ int menu() {
 					FileSystemNode* pade = new FileSystemNode(nombre,autor,padre);
 					PTT* ptt = new PTT(titulo,numSlides,numPlantillas,tieneAnimacion,nombre,autor,pade);
 					dir->agregarArchivo(ptt);
+					d.push_back(ptt);
 					break;
 				}
 				case 3: {
@@ -137,7 +179,8 @@ int menu() {
 					FileSystemNode* padre = new FileSystemNode(nombre,autor,padre);
 
 					dir->agregarArchivo(padre);
-
+					JGP* jgp = new JGP(conFlash,resolucion,largo,ancho);
+					d.push_back(jgp);
 					break;
 				}
 				default: {
@@ -151,10 +194,10 @@ int menu() {
 			break;
 		}
 		case 4: {
-			cout<<"Ingrese la palabra a Buscar: "<<endl; 
+			cout<<"Ingrese la palabra a Buscar: "<<endl;
 			string x;
 			cin>>x;
-			dir->BuscarPorNombre(x); 
+			dir->BuscarPorNombre(x);
 			return 4;
 			break;
 		}

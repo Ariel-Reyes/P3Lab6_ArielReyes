@@ -1,6 +1,9 @@
 #ifndef CPP_HPP
 #define CPP_HPP
 #include "Archivo.hpp"
+#include <string>
+using namespace std; 
+#include <iostream>
 class CPP : public Archivo {
 	private:
 		int lineasCodigo;

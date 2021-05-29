@@ -13,7 +13,7 @@ class JGP : public Archivo
 	public:
 		JGP();
 		~JGP();
-		
+		JGP(bool conFlash,string resolucion, double largo, double ancho);
 	
 	 void set_Flash(bool x); 
 	 bool get_Flash(); 

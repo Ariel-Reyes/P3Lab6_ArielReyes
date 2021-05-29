@@ -5,10 +5,17 @@ JGP::JGP(){
 	
 }
 
-
+JGP::JGP(bool conFlash,string resolucion, double largo, double ancho) 
+{
+	this->conFlash = conFlash; 
+		this->resolucion = resolucion; 
+		this->largo = largo; 
+		this->ancho = ancho; 
+}
 
 JGP::~JGP()
 {
+	
 }
 
 
@@ -42,8 +49,7 @@ JGP::~JGP()
 	}; 
 	
 	void JGP::toString(){
-		cout<<"Flash: "<<conFlash<<" Resolucion: "<<resolucion<<" Largo: "<<largo<<" Ancho: "<<ancho<<endl;
-	};
-	
+		cout<<"Con Flash: "<<conFlash<<" Resolucion: "<<resolucion<<" Largo: "<<largo<<" Ancho: "<<ancho<<endl; 
+	}	
 	
 	

@@ -16,7 +16,8 @@ class Directorio : public Archivo {
 		void agregarArchivo(FileSystemNode*);
 		void agregarDirectorio(FileSystemNode*);
 		void BuscarPorNombre(string);
-
+		
+        vector<FileSystemNode*> get_hijos(); 
 
 
 };
