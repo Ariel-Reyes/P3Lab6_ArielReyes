@@ -44,6 +44,10 @@ int menu() {
 			break;
 		}
 		case 2: {
+			if(d.size()==0){
+				cout<<"Aun no hay Files"<<endl; 
+			} else {
+			
 			int in=0;
 			Directorio* aux = new Directorio();
 			while(in!=1) {
@@ -77,6 +81,7 @@ int menu() {
 				cin>>in;
 			}
 			dire_list.push_back(aux);
+		}
 			return 2;
 			break;
 		}
